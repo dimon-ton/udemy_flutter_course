@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:first_app/gradiant_container.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Pimon Tungratog!!'),
-        ),
+        body:
+            GradiantContainer(colors: const [Colors.deepPurple, Colors.amber]),
       ),
     ),
   );
