@@ -5,13 +5,16 @@ Alignment? startAlignment;
 var endAlignment = Alignment.bottomRight;
 
 class GradiantContainer extends StatelessWidget {
-  const GradiantContainer({super.key, required this.colors});
+  GradiantContainer({super.key, required this.colors});
 
   final List<Color> colors;
   final Alignment startAlignment = Alignment.topLeft;
 
+  var activeDiceImage = 'assets/images/dice-2.png';
+
   void rollDice() {
-    //..
+    activeDiceImage = 'assets/images/dice-2.png';
+    print('Changing image...');
   }
 
   @override
@@ -24,7 +27,7 @@ class GradiantContainer extends StatelessWidget {
       child: Center(
           child: Column(mainAxisSize: MainAxisSize.min, children: [
         Image.asset(
-          'assets/images/dice-2.png',
+          activeDiceImage,
           width: 200,
         ),
         const SizedBox(height: 20),
